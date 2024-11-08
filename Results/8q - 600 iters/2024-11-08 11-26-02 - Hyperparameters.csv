@@ -1,0 +1,3 @@
+num_iters,num_runs,cl_types,with_val,nqubits,with_bias,optimizer,loss_type,initialization,hamiltonian,batch_size,train_size,val_size,cl_pace_ratios,cl_iter_ratios,generator_type,uniform_train,uniform_val,epsilon_train,epsilon_val,max_weight_init,stepsize,key,gate_id
+600,10,"['NCL', 'CL', 'ACL', 'RAND', 'SPCL', 'SPACL', 'PCL', 'PACL', 'FSPCL', 'FSPACL']",True,8,False,Adam,mean_squares,gaussian,gch,10,50,1000,"[0.2  0.   0.02 0.02 0.04 0.02 0.02 0.04 0.02 0.04 0.04 0.04 0.04 0.06
+ 0.04 0.06 0.06 0.08 0.06 0.1 ]","[0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]",a0,False,False,False,False,6.283185307179586,0.01,2024-11-08 11-26-02,general
