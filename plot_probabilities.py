@@ -11,7 +11,7 @@ from loss import variational_classifier
 
 nqubits = 8
 num_iters = 600
-time_now = "2024-11-08 10-10-40" # Put the date and time of your calculations here
+time_now = "2024-11-08 11-26-02" # Put the date and time of your calculations here
 file_name = "FSPACL"
 
 run = 0
