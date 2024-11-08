@@ -6,8 +6,8 @@ This repository has some files filled with functions, but only three executable 
 
 1. `main.py`: The main part of the code where the training optimization happens. At the start of the script, set all the hyperparameter settings as you want and then run the script. This will create several csv with relevant data from the training in the `Results` folder. It will also create some loss plots in order to better visualize the progress of each strategy.
 
-2. `plot_accuracy.py`: A small script that outputs a figure (in the Results folder) comparing the accuracies of several Curriculum Learning strategies. In the settings, choose the parameters that point to the right files and run the script.
+2. `plot_accuracy.py`: A small script that outputs a figure (in the `Results` folder) comparing the accuracies of several Curriculum Learning strategies. In the settings, choose the parameters that point to the right files and run the script.
 
-3. `plot_probabilities.py`: Another small script that outputs, this time, a figure showing the probabilities of classification of the different classes along a certain path in the parametrized Hamiltonian space.
+3. `plot_probabilities.py`: Another small script that outputs, this time, a figure showing the probabilities of classification of the different classes along a certain path in the parametrized Hamiltonian space. You can also find it in the `Results` folder.
 
 You can see already an example of the output of these three scripts in the Results folder. Due to its large size, the Data csv are spared from being uploaded into github and are therefore missing.
