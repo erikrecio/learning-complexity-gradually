@@ -9,12 +9,12 @@ message: >-
 type: software
 authors:
   - given-names: Erik
-    family-names: Recio Armengol
+    family-names: Recio-Armengol
     email: erikrecio@gmail.com
     affiliation: ICFO (Institute of Photonic Sciences)
     orcid: 'https://orcid.org/0000-0001-5261-1477'
   - given-names: Carlos
-    family-names: Bravo Prieto
+    family-names: Bravo-Prieto
     email: c.bravo.prieto@fu-berlin.de
     affiliation: FU Berlin
     orcid: 'https://orcid.org/0000-0003-1041-2044'
