@@ -18,7 +18,7 @@ authors:
     affiliation: FU Berlin
 identifiers:
   - type: url
-    value: 'https://www.google.com'
+    value: 'https://arxiv.org/abs/2411.11954'
     description: Paper's arxiv
 repository-code: 'https://github.com/erikrecio/learning-complexity-gradually'
 keywords:
