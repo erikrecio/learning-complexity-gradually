@@ -25,3 +25,24 @@ keywords:
   - Curriculum Learning
   - Inductive Bias
   - Quantum Machine Learning
+preferred-citation:
+  type: generic
+  title: "Learning complexity gradually in quantum machine learning models"
+  authors:
+  - given-names: Erik
+    family-names: Recio-Armengol
+    affiliation: ICFO (Institute of Photonic Sciences)
+  - given-names: Franz J.
+    family-names: Schreiber
+    affiliation: FU Berlin
+  - given-names: Jens
+    family-names: Eisert
+    affiliation: FU Berlin
+  - given-names: Carlos
+    family-names: Bravo-Prieto
+    affiliation: FU Berlin
+  year: 2024
+  eprint: 2411.11954
+  archivePrefix: arXiv
+  primaryClass: quant-ph
+  url: "https://arxiv.org/abs/2411.11954"
