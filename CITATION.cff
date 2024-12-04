@@ -24,7 +24,7 @@ keywords:
   - Quantum Machine Learning
 preferred-citation:
   type: generic
-  title: "Learning complexity gradually in quantum machine learning models"
+  title: 'Learning complexity gradually in quantum machine learning models'
   authors:
   - given-names: Erik
     family-names: Recio-Armengol
@@ -42,4 +42,4 @@ preferred-citation:
   eprint: 2411.11954
   archivePrefix: arXiv
   primaryClass: quant-ph
-  url: "https://arxiv.org/abs/2411.11954"
+  url: 'https://arxiv.org/abs/2411.11954'
