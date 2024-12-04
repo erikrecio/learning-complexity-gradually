@@ -1,5 +1,5 @@
 # Learning complexity gradually in quantum machine learning models
-This repository contains the functions and scripts used for the simulation and optimization of quantum neural networks supporting the research presented in the paper "Learning complexity gradually in quantum machine learning models", available on [arxiv](https://www.google.com). Dependencies are listed in `requirements.txt`.
+This repository contains the functions and scripts used for the simulation and optimization of quantum neural networks supporting the research presented in the paper "Learning complexity gradually in quantum machine learning models", available on [arxiv](https://arxiv.org/abs/2411.11954). Dependencies are listed in `requirements.txt`.
 
 ## Repository structure and running the code
 This repository contains various utility files and three main executable scripts:
