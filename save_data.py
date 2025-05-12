@@ -454,19 +454,19 @@ def save_data(
     
     
     # ------------------- Plots ------------------- #
-    save_plots(time_now,
-               folder_name,
-               cl,
-               run,
-               acc_train,
-               acc_val,
-               losses,
-               pred_train,
-               pred_val,
-               j_train,
-               j_val,
-               with_val,
-              )
+    # save_plots(time_now,
+    #            folder_name,
+    #            cl,
+    #            run,
+    #            acc_train,
+    #            acc_val,
+    #            losses,
+    #            pred_train,
+    #            pred_val,
+    #            j_train,
+    #            j_val,
+    #            with_val,
+    #           )
     
     if cl == "NCL":
         cl_str = "NCL   "

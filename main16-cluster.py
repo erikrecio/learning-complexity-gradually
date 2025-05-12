@@ -32,13 +32,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # "FSPACL" - Fixed Self paced anti-curriculum
 
 # Running parameters
-num_iters = 600    # Number of training iterations
-num_runs = 10      # Number of training runs used to calculate the average loss and accuracy
-cl_types =  ["NCL", "CL", "ACL", "RAND", "SPCL", "SPACL", "PCL", "PACL", "FSPCL", "FSPACL"]
+num_iters = 300    # Number of training iterations
+num_runs = 5      # Number of training runs used to calculate the average loss and accuracy
+cl_types =  ["NCL", "SPCL", "SPACL", "FSPACL"]
 with_val = True
 
 # Circuit and optimization parameters
-nqubits = 8         # Num qubits, min 4, always 2**num_layers qubits
+nqubits = 16         # Num qubits, min 4, always 2**num_layers qubits
 gate_id = "general"      # QCNN type, either "general", "a0"
 with_bias = False    # Add a bias to the output of the quantum circuit
 optimizer = "Adam"  # "Adam", "GradientDescent", "BFGS"
@@ -49,7 +49,7 @@ initialization = "gaussian" # "gaussian", "uniform"
 ham = "gch" # "gch" (Generalized Cluster Hamiltonian) or "ssh" (Su-Schrieffer-Heeger)
 batch_size = 10     # batch training size
 train_size = 50      # Total ground states that will be used for training
-val_size = 1000      # Total gound states with training + validation
+val_size = 100      # Total gound states with training + validation
 
 cl_iter_ratios = [1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20]
 
@@ -105,7 +105,7 @@ if "PCL" in cl_types or "PACL" in cl_types:
 
 time_now = datetime.now(pytz.timezone('Europe/Andorra')).strftime("%Y-%m-%d %H-%M-%S")
 
-folder_name = f"Results/{nqubits}q - {num_iters:} iters/"
+folder_name = f"Results/ham {ham} - {nqubits}q - {num_iters} iters/"
 if not os.path.isdir(f'{folder_name}'):
     os.makedirs(f'{folder_name}')
 
@@ -147,6 +147,14 @@ elif optimizer == "BFGS":
     opt = jaxopt.BFGS(loss, verbose=False, jit=True)
 
 
+if with_val:
+    print("Generating validation ground states...")
+    start_time = time.time()
+    gs_val, labels_val, j_val = generate_gs(val_size, uniform_val, epsilon_val, nqubits, ham)
+    run_time = time.time() - start_time
+    print(f"Validation ground states generated - {run_time:.0f}s")
+    print()
+
 for run in range (num_runs):
     
     # -------------------------------------------------------------- #
@@ -155,11 +163,7 @@ for run in range (num_runs):
     
     print("Generating ground states...")
     start_time = time.time()
-
     gs_train, labels_train, j_train = generate_gs(train_size, uniform_train, epsilon_train, nqubits, ham)
-    if with_val:
-        gs_val, labels_val, j_val = generate_gs(val_size, uniform_val, epsilon_val, nqubits, ham)
-
     run_time = time.time() - start_time
 
     print(f"Ground states generated - {run_time:.0f}s")
