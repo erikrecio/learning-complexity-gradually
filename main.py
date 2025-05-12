@@ -105,7 +105,7 @@ if "PCL" in cl_types or "PACL" in cl_types:
 
 time_now = datetime.now(pytz.timezone('Europe/Andorra')).strftime("%Y-%m-%d %H-%M-%S")
 
-folder_name = f"Results/{nqubits}q - {num_iters:} iters/"
+folder_name = f"Results/ham {ham} - {nqubits}q - {num_iters} iters/"
 if not os.path.isdir(f'{folder_name}'):
     os.makedirs(f'{folder_name}')
 
