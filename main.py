@@ -51,6 +51,13 @@ batch_size = 10     # batch training size
 train_size = 50      # Total ground states that will be used for training
 val_size = 1000      # Total gound states with training + validation
 
+# Pacing function
+# In the code, the pacing function is defined with 2 vectors of equal size, independent of num_iters and train_size.
+# cl_pace_ratios: How many training samples are added into the pool where the batches are taken from (ratio relative to train_size).
+# cl_iter_ratios: At which iteration those samples are added (ratio relative to num_iters).
+# Therefore, the pacing function is defined by the points (x,y) = (cl_iter_ratios * num_iters, cl_pace_ratios * train_size)
+# In the examples below we use a uniform cl_iter_ratios and define three different cl_pace_ratios corresponding to log, linear and exponential paces.
+
 cl_iter_ratios = [1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20]
 
 # Example of logarithmic pace
@@ -62,6 +69,9 @@ cl_iter_ratios = [1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/
 # Example of exponential pace
 cl_pace_ratios = np.array([10,	0,	1,	1,	2,	1,	1,	2,	1,	2,	2,	2,	2,	3,	2,	3,	3,	4,	3,	5])/50
 
+
+# gen_type is the type of the quantum circuit (e.g. "a0", "a1", "a2") referencing
+# at the label of table 1 page 7 paper: https://arxiv.org/pdf/2309.05690.pdf
 gen_type = "a0"
 
 # How the training data is generated
