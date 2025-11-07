@@ -55,7 +55,7 @@ val_size = 1000      # Total gound states with training + validation
 # In the code, the pacing function is defined with 2 vectors of equal size, independent of num_iters and train_size.
 # cl_pace_ratios: How many training samples are added into the pool where the batches are taken from (ratio relative to train_size).
 # cl_iter_ratios: At which iteration those samples are added (ratio relative to num_iters).
-# Therefore, the pacing function is defined by the points (x,y) = (cl_iter_ratios * num_iters, cl_pace_ratios * train_size)
+# Therefore, the pacing function is the cumulative version of the function (x,y) = (cl_iter_ratios * num_iters, cl_pace_ratios * train_size)
 # In the examples below we use a uniform cl_iter_ratios and define three different cl_pace_ratios corresponding to log, linear and exponential paces.
 
 cl_iter_ratios = [1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20, 1/20]
